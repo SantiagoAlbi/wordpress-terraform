@@ -1,0 +1,144 @@
+.env
+.terraform
+.terraform/*
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+
+
+#===============================================================================
+# TERRAFORM FILES (Crítico para seguridad)
+#===============================================================================
+
+# State files (contienen información sensible)
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Plan files (pueden contener secretos)
+*.tfplan
+*.tfplan.*
+
+# Terraform directory
+.terraform/
+.terraform.lock.hcl
+
+# Variable files (contienen contraseñas y claves)
+terraform.tfvars
+terraform.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+#===============================================================================
+# SSH KEYS Y CERTIFICADOS
+#===============================================================================
+
+# SSH Keys (por si acaso las copias por error)
+*.pem
+*.key
+*.priv
+id_rsa*
+id_ed25519*
+id_ecdsa*
+id_dsa*
+
+# SSL Certificates
+*.crt
+*.cer
+*.p12
+*.pfx
+
+#===============================================================================
+# ARCHIVOS SENSIBLES
+#===============================================================================
+
+# Environment files
+.env
+.env.*
+
+# Secrets
+secrets.txt
+secrets.json
+passwords.txt
+
+# AWS credentials
+.aws/credentials
+.aws/config
+
+#===============================================================================
+# SISTEMA OPERATIVO
+#===============================================================================
+
+# Linux
+*~
+.directory
+
+
+
+#===============================================================================
+# IDE Y EDITORES
+#===============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+
+#===============================================================================
+# LOGS Y TEMPORALES
+#===============================================================================
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Archive files
+*.tar.gz
+*.zip
+*.rar
+
+#===============================================================================
+# ESPECÍFICOS DEL PROYECTO
+#===============================================================================
+
+# Backup files
+backup/
+backups/
+
+# Documentation builds
+docs/_build/
+
+# Test files
+test-*.tf
+*_test.tf
