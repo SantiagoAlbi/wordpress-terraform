@@ -10,13 +10,3 @@ resource "aws_instance" "public_ec2" {
     Name = "Public EC2 Instance"
   }
 }
-
-output "ec2_public_ip" {
-  description = "The public IP addreess of teh EC2 Instance"
-  value       = aws_instance.public_ec2.public_ip
-}
-
-output "ec2_endpoint" {
-  description = "DNS name of the EC2 Instance"
-  value       = aws_instance.public_ec2.public_dns
-}
